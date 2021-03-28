@@ -15,6 +15,9 @@ class CreateReadersTable extends Migration
     {
         Schema::create('readers', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 30);
+            $table->string('lastname', 30);
+            $table->date('birth_date');
             $table->timestamps();
         });
     }
