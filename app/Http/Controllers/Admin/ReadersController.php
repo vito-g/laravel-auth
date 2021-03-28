@@ -15,7 +15,7 @@ class ReadersController extends Controller
      */
     public function index()
     {
-        //
+        return redirect()->route('public-index');
     }
 
     /**
@@ -42,12 +42,12 @@ class ReadersController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  Reader  $reader
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Reader $reader)
     {
-        //
+        return redirect()->route('public-show', compact('reader'));
     }
 
     /**
