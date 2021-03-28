@@ -12,7 +12,12 @@
         <th scope="col">Lastname</th>
         <th scope="col">Birth-date</th>
         {{-- Aggiungo una colonna per le Action --}}
-        <th scope="col">Action</th>
+        <th scope="col">
+          @auth
+            Add
+            <a href="{{ route('readers.create')}}"><i class="fas fa-plus"></i></a>
+          @endauth
+        </th>
 
       </tr>
     </thead>
@@ -29,7 +34,7 @@
             <a href="{{ route('public-show', compact('reader')) }}"><i class="fas fa-eye"></i></a>
 
             @auth
-                  <a href="{{ route('readers.create')}}"><i class="fas fa-plus"></i></a>
+
                   <a href="{{ route('readers.edit', compact('reader')) }}"><i class="fas fa-pen"></i></a>
             @endauth
 
