@@ -33,7 +33,7 @@
   <div class="form-group">
     <label for="birth_date">Birth-date</label>
     {{-- <input type="text" class="form-control" name="Description" placeholder="Description"> --}}
-    <input type="text" class="form-control {{$errors->has('birth_date') ? 'is-invalid' : ''}}" name="birth_date" placeholder="birth_date" value="">
+    <input type="date" class="form-control {{$errors->has('birth_date') ? 'is-invalid' : ''}}" name="birth_date" placeholder="birth_date" value="">
     <div class="invalid-feedback">
       {{$errors->first('birth_date')}}
     </div>
