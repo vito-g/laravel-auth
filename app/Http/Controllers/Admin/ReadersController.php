@@ -44,6 +44,7 @@ class ReadersController extends Controller
 
       $data = $request->all();//Preparo una variabile dove vado a mettere, sfruttando il metodo all(), tutti le coppie chiave-valore, appunto, dei campi compilati del form
       $beer->fill($data); //Cerca di creare una mappatura dei parametri della form e di quelli del Model e fa un'assegnazione di massa per tutti gli attributi dell'oggetto del mio Database qualora ci sia corrispondenza di parametri. Per utilizzare questa istruzione ho inserito una var protected, fillable, nel Model.
+      $beer->save();
     }
 
     /**
