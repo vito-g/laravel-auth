@@ -30,6 +30,7 @@
 
             @auth
                   <a href="{{ route('readers.create')}}"><i class="fas fa-plus"></i></a>
+                  <a href="{{ route('readers.edit', compact('reader')) }}"><i class="fas fa-pen"></i></a>
             @endauth
 
           </td>
