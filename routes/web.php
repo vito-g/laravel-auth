@@ -20,5 +20,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/readers', 'PublicController@index')->name('public-index');
-Route::get('/readers/{reader}', 'PublicController@show')->name('public-show');
+Route::get('/readers', 'PublicController@index')->name('public-index');//name assegnerà alla rotta che porta al metodo index nome pari a 'public-index'.
+Route::get('/readers/{reader}', 'PublicController@show')->name('public-show');//name assegnerà alla rotta che porta al metodo show nome pari a 'public-show'.
