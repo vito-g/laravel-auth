@@ -28,10 +28,9 @@
 
             <a href="{{ route('public-show', compact('reader')) }}"><i class="fas fa-eye"></i></a>
 
-            {{-- <a href="{{ route('beers.edit', compact('beer')) }}"><i class="fas fa-pen"></i></a>
-
-            <a href="{{ route('beers.destroy', compact('beer')) }}"><i class="fas fa-eraser"></i></a> --}}
-
+            @auth
+                  <a href="{{ route('readers.create')}}"><i class="fas fa-plus"></i></a>
+            @endauth
 
           </td>
         </tr>
