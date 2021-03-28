@@ -41,6 +41,8 @@ class ReadersController extends Controller
       'lastname'=> 'required',
       'birth_date'=> 'required',
       ]);
+
+      $data = $request->all();//Preparo una variabile dove vado a mettere, sfruttando il metodo all(), tutti le coppie chiave-valore, appunto, dei campi compilati del form
     }
 
     /**
