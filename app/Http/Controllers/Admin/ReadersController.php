@@ -47,6 +47,7 @@ class ReadersController extends Controller
       $reader->fill($data); //Cerca di creare una mappatura dei parametri della form e di quelli del Model e fa un'assegnazione di massa per tutti gli attributi dell'oggetto del mio Database qualora ci sia corrispondenza di parametri. Per utilizzare questa istruzione ho inserito una var protected, fillable, nel Model.
       $reader->save();
       $readerStored = Reader::orderBy('id', 'desc')->first();//Prende l'ultimo oggetto di Classe Reader storato (quello con l'id più grande)
+      return redirect()->route('public-show', $readerStored);//Fa la redirect verso l'ultimo storato. Sto inviando, a mezzo rotta public-show,  allo show() methods l'oggetto 'reader' che è $readerStored.
     }
 
     /**
