@@ -36,7 +36,11 @@ class ReadersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $request->validate([//Sottopongo i dati provenienti dal form a validazione (la funzione è da usare pure per l'update. quindi potrei metterla esternamente alla store e richiamarla nei var methods all'occorrenza. l'IMPORTANTE E' CHE RESTI NEL CRUD.)
+      'name'=> 'required|max:30',
+      'lastname'=> 'required',
+      'birth_date'=> 'required',
+      ]);
     }
 
     /**
