@@ -25,7 +25,7 @@ class ReadersController extends Controller
      */
     public function create()
     {
-        //
+        return view('readers.private.create');
     }
 
     /**
