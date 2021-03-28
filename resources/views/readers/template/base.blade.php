@@ -4,9 +4,17 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="{{asset ('css/app.css')}}">
     <script src="{{asset ('js/app.js')}}" defer></script>
-    <title></title>
+    <title>Readers - @yield('title')</title>
   </head>
   <body>
+
+    <div class="container">
+
+      <main>
+        @yield('content')
+      </main>
+
+    </div>
 
   </body>
 </html>
