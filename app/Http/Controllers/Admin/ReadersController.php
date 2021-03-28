@@ -87,7 +87,7 @@ class ReadersController extends Controller
       //validation
       $reader ->update($data);
       //mostriamo il lettore aggiornato:
-      return redirect()->route('public-index', compact('reader'));
+      return redirect()->route('public-index');
     }
 
     /**
