@@ -39,22 +39,6 @@
     </div>
   </div>
 
-  <div class="form-group">
-    <label for="alcol">Alcol</label>
-    <input type="text" class="form-control {{$errors->has('alcol') ? 'is-invalid' : ''}}" name="alcol" placeholder="Alcol" value="{{$beer->alcol}}">
-    <div class="invalid-feedback">
-      {{$errors->first('alcol')}}
-    </div>
-  </div>
-
-  <div class="form-group">
-    <label for="cover">Cover</label>
-    <input type="text" class="form-control {{$errors->has('cover') ? 'is-invalid' : ''}}" name="cover" placeholder="Cover url" value="{{$beer->cover}}">
-    <div class="invalid-feedback">
-      {{$errors->first('cover')}}
-    </div>
-  </div>
-
   <input type="submit" value="Invia">
   </form>
 @endsection
