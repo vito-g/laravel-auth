@@ -14,6 +14,6 @@ class PublicController extends Controller
 
   public function show(Reader $reader) {
 
-    return view('readers.public.show', compact('reader')); //Gli ritorno una view che ho chiamato show.blade interna alla cartella public del folder delle views "readers" a cui passo l'univo lettore associato al suo id.
+    return view('readers.public.show', compact('reader')); //Gli ritorno una view che ho chiamato show.blade interna alla cartella public del folder delle views "readers" a cui passo l'univoco lettore associato al suo id.
   }
 }
