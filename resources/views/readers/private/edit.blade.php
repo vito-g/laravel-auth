@@ -39,6 +39,6 @@
     </div>
   </div>
 
-  <input type="submit" value="Invia">
+  <input type="submit" value="Update">
   </form>
 @endsection
