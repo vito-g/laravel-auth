@@ -64,12 +64,12 @@ class ReadersController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  Reader  $reader
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Reader $reader)
     {
-        //
+        return view('readers.private.edit', compact('reader'));
     }
 
     /**
