@@ -76,12 +76,18 @@ class ReadersController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  Reader  $reader
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Reader $reader)
     {
-        //
+      //Anche qui andrebbe la validazione
+      // dd($reader);
+      $data = $request->all();
+      //validation
+      $reader ->update($data);
+      //mostriamo il lettore aggiornato:
+      return redirect()->route('public-index', compact('reader'));
     }
 
     /**
