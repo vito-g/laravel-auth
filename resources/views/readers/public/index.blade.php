@@ -34,8 +34,16 @@
             <a href="{{ route('public-show', compact('reader')) }}"><i class="fas fa-eye"></i></a>
 
             @auth
-
                   <a href="{{ route('readers.edit', compact('reader')) }}"><i class="fas fa-pen"></i></a>
+                  <a href="{{ route('readers.destroy', compact('reader')) }}"><i class="fas fa-eraser"></i></a>
+
+                  {{-- ----------------------------- --}}
+                  {{-- <form action="{{route('readers.destroy', compact('reader'))}}" method="post">
+                  @csrf
+                  @method('DELETE')
+                    <i class="fas fa-eraser"></i>
+                  </form> --}}
+                  {{-- ----------------------------- --}}
             @endauth
 
           </td>
