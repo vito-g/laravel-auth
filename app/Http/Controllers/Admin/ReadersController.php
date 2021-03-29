@@ -93,11 +93,12 @@ class ReadersController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  Reader  $reader
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Reader $reader)
     {
-        //
+        $reader->delete();
+        return redirect()->route('public-index');
     }
 }
